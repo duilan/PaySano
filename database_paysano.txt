@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.3
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 25-08-2016 a las 06:38:27
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `paysano`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos`
+--
+
+CREATE TABLE IF NOT EXISTS `productos` (
+  `id_producto` int(10) unsigned NOT NULL,
+  `nombre` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `precio` double NOT NULL,
+  `imagen` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `nombre`, `descripcion`, `precio`, `imagen`) VALUES
+(1, 'Pay de Limon', 'Pay con relleno y sabor limon y lima', 150, 'pay-limon.jpg'),
+(2, 'pay de Manzana', 'Pay relleno de pulpa y rebanadas de manzana roja u amarilla', 150, 'pay-manzana.jpg'),
+(3, 'Pay de Mango', 'Pay relleno de pulpa y rodajas de mando', 200, 'pay-mango.jpg'),
+(4, 'Pay de Nuez', 'Pay relleno de nuez y cajeta', 130, 'pay-nuez.jpg'),
+(5, 'Pay de Nutella', 'Pay delicioso relleno y cubierto de nutella para los amantes este producto', 250, 'pay-nutella.jpg'),
+(6, 'Pay Oreo', 'Pay en forma y sabor galleta Oreo', 180, 'pay-oreo.jpg'),
+(7, 'Pay Piña-Colada', 'Para los mas exigentes y amantes de la piña colada ahora en Pay!', 150, 'pay-pinacolada.jpg'),
+(8, 'Pay Vegetal', 'Tenemos para aquellos amantes de las verduras el Pay vegetal el cual contiene entre sus especies: zanahoria,chicharo,maiz,papa.', 190, 'pay-vegetal.jpg'),
+(9, 'Pay de Zarzamora', 'El pay de zarzamora que todos aman ahora con mas sabor y mermelada!', 170, 'pay-zarzamora.jpg'),
+(10, 'Pay de Uvas', 'Pay con relleno de Uvas y gelatina', 140, 'pay-uvas.jpg'),
+(41, 'Pay de Fresa', 'Pay con mermelada y relleno de fresa', 190, 'pay-fresa.jpg');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`id_producto`),
+  ADD UNIQUE KEY `id` (`id_producto`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `id_producto` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
